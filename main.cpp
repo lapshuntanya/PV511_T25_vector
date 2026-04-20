@@ -1,12 +1,26 @@
-#include <iostream>
+#include "MyVector.h"
+#include <string>
 
 
 int main() {
 
-       // Student b; // b["name"] = "Petro"
         MyVector<int> a(3, 0); //size = 3, arr = [0, 0 , 0]
+        MyVector <string> b; //size = 0, arr = []
 
-         a[1] = 45; // arr[1] = 45, [0, 45, 0]
+        a.push_back(45);
+
+        b.push_back("Diana");
+        b.push_back("Dmytro");
+        b.push_back("Volodymyr");
+
+        a.print(); //[0, 0, 0, 45]
+    b.print(); //["Diana", "Dmytro", "Volodymyr"]
+
+    a[0] = -99;
+    b[0] = "Danylo";
+
+    a.print();
+    b.print();
 
     return 0;
 }
