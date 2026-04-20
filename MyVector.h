@@ -52,9 +52,26 @@ public:
         arr = tmp;
     }
 
-    Type& operator[](int number);
+    Type& operator[](int number) {
+        return arr[number];
+    }
 
-    Type find_max()const; // пошук елемента з максимальним значенням
-    Type find_min()const; // пошук елемента з мінімальним значенням
+
+    Type find_max()const // пошук елемента з максимальним значенням
+    {
+        Type m = arr[0];
+        for (int i =1; i < size; i++) {
+            if (arr[i]> m) m = arr[i];
+        }
+        return m;
+    }
+    Type find_min()const // пошук елемента з мінімальним значенням
+    {
+        Type m = arr[0];
+        for (int i =1; i < size; i++) {
+            if (arr[i]< m) m = arr[i];
+        }
+        return m;
+    }
 
 };

@@ -3,14 +3,10 @@
 
 int main() {
 
-    if () {
-        MyVector<int> a(3, 0); //[0, 0 , 0]
-        //
-        ...
-        a.getsize();// size = 3
-        //
-    }//~MyVector
+       // Student b; // b["name"] = "Petro"
+        MyVector<int> a(3, 0); //size = 3, arr = [0, 0 , 0]
 
-    a
+         a[1] = 45; // arr[1] = 45, [0, 45, 0]
+
     return 0;
 }
